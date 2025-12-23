@@ -1,0 +1,91 @@
+.bottom-nav {
+  ion-toolbar {
+    --background: var(--ion-color-light);
+    --border-style: none;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    padding: 0 8px;
+  }
+
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    min-width: 60px;
+    max-width: 100px;
+    cursor: pointer;
+    position: relative;
+    padding: 8px 4px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+
+    ion-icon {
+      font-size: 24px;
+      color: var(--ion-color-medium);
+      transition: color 0.2s ease;
+    }
+
+    .nav-label {
+      font-size: 11px;
+      margin-top: 4px;
+      color: var(--ion-color-medium);
+      transition: color 0.2s ease;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+    }
+
+    .nav-badge {
+      position: absolute;
+      top: 4px;
+      right: 8px;
+      font-size: 10px;
+      min-width: 16px;
+      height: 16px;
+      border-radius: 8px;
+    }
+
+    &.active {
+      background-color: var(--ion-color-primary-tint);
+
+      ion-icon,
+      .nav-label {
+        color: var(--ion-color-primary);
+        font-weight: 600;
+      }
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+
+    &.back-button {
+      ion-icon {
+        color: var(--ion-color-dark);
+      }
+
+      .nav-label {
+        color: var(--ion-color-dark);
+      }
+    }
+  }
+}
+
+// Mobile-first: Ensure thumb-friendly tap targets
+@media (max-width: 576px) {
+  .bottom-nav {
+    .nav-item {
+      min-width: 56px;
+      min-height: 56px;
+    }
+  }
+}

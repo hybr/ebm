@@ -1,0 +1,53 @@
+<ion-content>
+  <div class="login-container">
+    <div class="login-header">
+      <ion-icon name="lock-closed-outline" class="large-icon"></ion-icon>
+      <h1>Welcome Back</h1>
+      <p>Sign in to continue</p>
+    </div>
+
+    <ion-card>
+      <ion-card-content>
+        <form (ngSubmit)="login()">
+          <ion-item>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input
+              type="email"
+              [(ngModel)]="email"
+              name="email"
+              required
+              [disabled]="isLoading"
+            ></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input
+              type="password"
+              [(ngModel)]="password"
+              name="password"
+              required
+              [disabled]="isLoading"
+            ></ion-input>
+          </ion-item>
+
+          <ion-button
+            expand="block"
+            type="submit"
+            class="login-button"
+            [disabled]="isLoading"
+          >
+            <ion-spinner *ngIf="isLoading" name="crescent"></ion-spinner>
+            <span *ngIf="!isLoading">Login</span>
+          </ion-button>
+        </form>
+
+        <div class="demo-info">
+          <p><strong>Demo Credentials:</strong></p>
+          <p>Email: demo@example.com</p>
+          <p>Password: password123</p>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

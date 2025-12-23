@@ -1,0 +1,12 @@
+ion-item.active {
+  --background: var(--ion-color-primary-tint);
+
+  ion-label {
+    font-weight: 600;
+    color: var(--ion-color-primary);
+  }
+}
+
+ion-popover {
+  --width: 300px;
+}

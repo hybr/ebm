@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:moleculer.services)",
+      "Bash(ionic start:*)",
+      "Bash(npm install:*)",
+      "Bash(npx @ionic/cli start:*)",
+      "Bash(npx @ionic/cli generate:*)",
+      "Bash(npm run dev:*)",
+      "Bash(ionic generate:*)",
+      "Bash(taskkill:*)"
+    ]
+  }
+}

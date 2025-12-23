@@ -1,0 +1,501 @@
+[
+  {
+    "id": "home",
+    "label": "Home",
+    "icon": "home-outline",
+    "route": "/home",
+    "visibleWhen": "always",
+    "metadata": {
+      "order": 1
+    },
+    "children": [
+      {
+        "id": "market",
+        "label": "Market",
+        "icon": "storefront-outline",
+        "route": "/home/market",
+        "featureKey": "market",
+        "visibleWhen": "always",
+        "metadata": {
+          "order": 1
+        },
+        "children": [
+          {
+            "id": "market-categories",
+            "label": "Categories",
+            "icon": "grid-outline",
+            "route": "/home/market/categories",
+            "metadata": { "order": 1 },
+            "children": [
+              {
+                "id": "market-categories-near-me",
+                "label": "Near Me",
+                "icon": "navigate-outline",
+                "route": "/home/market/categories/near-me",
+                "metadata": { "order": 1 }
+              },
+              {
+                "id": "market-categories-new",
+                "label": "New",
+                "icon": "sparkles-outline",
+                "route": "/home/market/categories/new",
+                "metadata": { "order": 2 }
+              },
+              {
+                "id": "market-categories-top",
+                "label": "Top",
+                "icon": "trending-up-outline",
+                "route": "/home/market/categories/top",
+                "metadata": { "order": 3 }
+              },
+              {
+                "id": "market-categories-all",
+                "label": "All",
+                "icon": "apps-outline",
+                "route": "/home/market/categories/all",
+                "metadata": { "order": 4 }
+              }
+            ]
+          },
+          {
+            "id": "market-goods",
+            "label": "Goods",
+            "icon": "cube-outline",
+            "route": "/home/market/goods",
+            "metadata": { "order": 2 },
+            "children": [
+              {
+                "id": "market-goods-near-me",
+                "label": "Near Me",
+                "icon": "navigate-outline",
+                "route": "/home/market/goods/near-me",
+                "metadata": { "order": 1 }
+              },
+              {
+                "id": "market-goods-new",
+                "label": "New",
+                "icon": "sparkles-outline",
+                "route": "/home/market/goods/new",
+                "metadata": { "order": 2 }
+              },
+              {
+                "id": "market-goods-top",
+                "label": "Top",
+                "icon": "trending-up-outline",
+                "route": "/home/market/goods/top",
+                "metadata": { "order": 3 }
+              },
+              {
+                "id": "market-goods-all",
+                "label": "All",
+                "icon": "apps-outline",
+                "route": "/home/market/goods/all",
+                "metadata": { "order": 4 }
+              }
+            ]
+          },
+          {
+            "id": "market-services",
+            "label": "Services",
+            "icon": "construct-outline",
+            "route": "/home/market/services",
+            "metadata": { "order": 3 },
+            "children": [
+              {
+                "id": "market-services-near-me",
+                "label": "Near Me",
+                "icon": "navigate-outline",
+                "route": "/home/market/services/near-me",
+                "metadata": { "order": 1 }
+              },
+              {
+                "id": "market-services-new",
+                "label": "New",
+                "icon": "sparkles-outline",
+                "route": "/home/market/services/new",
+                "metadata": { "order": 2 }
+              },
+              {
+                "id": "market-services-top",
+                "label": "Top",
+                "icon": "trending-up-outline",
+                "route": "/home/market/services/top",
+                "metadata": { "order": 3 }
+              },
+              {
+                "id": "market-services-all",
+                "label": "All",
+                "icon": "apps-outline",
+                "route": "/home/market/services/all",
+                "metadata": { "order": 4 }
+              }
+            ]
+          },
+          {
+            "id": "market-rental",
+            "label": "Rental",
+            "icon": "key-outline",
+            "route": "/home/market/rental",
+            "metadata": { "order": 4 },
+            "children": [
+              {
+                "id": "market-rental-near-me",
+                "label": "Near Me",
+                "icon": "navigate-outline",
+                "route": "/home/market/rental/near-me",
+                "metadata": { "order": 1 }
+              },
+              {
+                "id": "market-rental-new",
+                "label": "New",
+                "icon": "sparkles-outline",
+                "route": "/home/market/rental/new",
+                "metadata": { "order": 2 }
+              },
+              {
+                "id": "market-rental-top",
+                "label": "Top",
+                "icon": "trending-up-outline",
+                "route": "/home/market/rental/top",
+                "metadata": { "order": 3 }
+              },
+              {
+                "id": "market-rental-all",
+                "label": "All",
+                "icon": "apps-outline",
+                "route": "/home/market/rental/all",
+                "metadata": { "order": 4 }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "job",
+        "label": "Job",
+        "icon": "briefcase-outline",
+        "route": "/home/job",
+        "featureKey": "job",
+        "visibleWhen": "always",
+        "metadata": {
+          "order": 2
+        },
+        "children": [
+          {
+            "id": "job-vacancies",
+            "label": "Vacancies",
+            "icon": "newspaper-outline",
+            "route": "/home/job/vacancies",
+            "metadata": { "order": 1 },
+            "children": [
+              {
+                "id": "job-vacancies-near-me",
+                "label": "Near Me",
+                "icon": "navigate-outline",
+                "route": "/home/job/vacancies/near-me",
+                "metadata": { "order": 1 }
+              },
+              {
+                "id": "job-vacancies-new",
+                "label": "New",
+                "icon": "sparkles-outline",
+                "route": "/home/job/vacancies/new",
+                "metadata": { "order": 2 }
+              },
+              {
+                "id": "job-vacancies-top",
+                "label": "Top",
+                "icon": "trending-up-outline",
+                "route": "/home/job/vacancies/top",
+                "metadata": { "order": 3 }
+              },
+              {
+                "id": "job-vacancies-all",
+                "label": "All",
+                "icon": "apps-outline",
+                "route": "/home/job/vacancies/all",
+                "metadata": { "order": 4 }
+              }
+            ]
+          },
+          {
+            "id": "job-applied",
+            "label": "Applied",
+            "icon": "checkmark-circle-outline",
+            "route": "/home/job/applied",
+            "requiresAuth": true,
+            "metadata": { "order": 2 }
+          },
+          {
+            "id": "job-saved",
+            "label": "Saved",
+            "icon": "bookmark-outline",
+            "route": "/home/job/saved",
+            "requiresAuth": true,
+            "metadata": { "order": 3 }
+          },
+          {
+            "id": "job-post",
+            "label": "Post Job",
+            "icon": "add-circle-outline",
+            "route": "/home/job/post",
+            "requiresAuth": true,
+            "requiresOrgAdmin": true,
+            "metadata": { "order": 4 }
+          }
+        ]
+      },
+      {
+        "id": "visit",
+        "label": "Visit",
+        "icon": "location-outline",
+        "route": "/home/visit",
+        "featureKey": "visit",
+        "visibleWhen": "always",
+        "metadata": {
+          "order": 3
+        },
+        "children": [
+          {
+            "id": "visit-organization",
+            "label": "Organization",
+            "icon": "business-outline",
+            "route": "/home/visit/organization",
+            "metadata": { "order": 1 },
+            "children": [
+              {
+                "id": "visit-organization-near-me",
+                "label": "Near Me",
+                "icon": "navigate-outline",
+                "route": "/home/visit/organization/near-me",
+                "metadata": { "order": 1 }
+              },
+              {
+                "id": "visit-organization-new",
+                "label": "New",
+                "icon": "sparkles-outline",
+                "route": "/home/visit/organization/new",
+                "metadata": { "order": 2 }
+              },
+              {
+                "id": "visit-organization-top",
+                "label": "Top",
+                "icon": "trending-up-outline",
+                "route": "/home/visit/organization/top",
+                "metadata": { "order": 3 }
+              },
+              {
+                "id": "visit-organization-all",
+                "label": "All",
+                "icon": "apps-outline",
+                "route": "/home/visit/organization/all",
+                "metadata": { "order": 4 }
+              }
+            ]
+          },
+          {
+            "id": "visit-person",
+            "label": "Person",
+            "icon": "person-outline",
+            "route": "/home/visit/person",
+            "metadata": { "order": 2 },
+            "children": [
+              {
+                "id": "visit-person-near-me",
+                "label": "Near Me",
+                "icon": "navigate-outline",
+                "route": "/home/visit/person/near-me",
+                "metadata": { "order": 1 }
+              },
+              {
+                "id": "visit-person-new",
+                "label": "New",
+                "icon": "sparkles-outline",
+                "route": "/home/visit/person/new",
+                "metadata": { "order": 2 }
+              },
+              {
+                "id": "visit-person-top",
+                "label": "Top",
+                "icon": "trending-up-outline",
+                "route": "/home/visit/person/top",
+                "metadata": { "order": 3 }
+              },
+              {
+                "id": "visit-person-all",
+                "label": "All",
+                "icon": "apps-outline",
+                "route": "/home/visit/person/all",
+                "metadata": { "order": 4 }
+              }
+            ]
+          },
+          {
+            "id": "visit-place",
+            "label": "Place",
+            "icon": "map-outline",
+            "route": "/home/visit/place",
+            "metadata": { "order": 3 },
+            "children": [
+              {
+                "id": "visit-place-near-me",
+                "label": "Near Me",
+                "icon": "navigate-outline",
+                "route": "/home/visit/place/near-me",
+                "metadata": { "order": 1 }
+              },
+              {
+                "id": "visit-place-new",
+                "label": "New",
+                "icon": "sparkles-outline",
+                "route": "/home/visit/place/new",
+                "metadata": { "order": 2 }
+              },
+              {
+                "id": "visit-place-top",
+                "label": "Top",
+                "icon": "trending-up-outline",
+                "route": "/home/visit/place/top",
+                "metadata": { "order": 3 }
+              },
+              {
+                "id": "visit-place-all",
+                "label": "All",
+                "icon": "apps-outline",
+                "route": "/home/visit/place/all",
+                "metadata": { "order": 4 }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "work",
+    "label": "Work",
+    "icon": "business-outline",
+    "route": "/work",
+    "requiresAuth": true,
+    "visibleWhen": "authenticated",
+    "featureKey": "work",
+    "metadata": {
+      "order": 2
+    },
+    "children": [
+      {
+        "id": "work-dashboard",
+        "label": "Dashboard",
+        "icon": "analytics-outline",
+        "route": "/work/dashboard",
+        "featureKey": "work_dashboard",
+        "metadata": { "order": 1 }
+      },
+      {
+        "id": "work-processes",
+        "label": "Processes",
+        "icon": "git-network-outline",
+        "route": "/work/processes",
+        "featureKey": "work_processes",
+        "metadata": { "order": 2 }
+      },
+      {
+        "id": "work-tasks",
+        "label": "Tasks",
+        "icon": "list-outline",
+        "route": "/work/tasks",
+        "featureKey": "work_tasks",
+        "metadata": { "order": 3 }
+      },
+      {
+        "id": "work-analytics",
+        "label": "Analytics",
+        "icon": "bar-chart-outline",
+        "route": "/work/analytics",
+        "featureKey": "work_analytics",
+        "metadata": { "order": 4 }
+      }
+    ]
+  },
+  {
+    "id": "my",
+    "label": "My",
+    "icon": "person-circle-outline",
+    "route": "/my",
+    "requiresAuth": true,
+    "visibleWhen": "authenticated",
+    "metadata": {
+      "order": 3
+    },
+    "children": [
+      {
+        "id": "my-profile",
+        "label": "Profile",
+        "icon": "person-outline",
+        "route": "/my/profile",
+        "metadata": { "order": 1 }
+      },
+      {
+        "id": "my-processes",
+        "label": "Processes",
+        "icon": "git-branch-outline",
+        "route": "/my/processes",
+        "metadata": { "order": 2 }
+      },
+      {
+        "id": "my-settings",
+        "label": "Settings",
+        "icon": "settings-outline",
+        "route": "/my/settings",
+        "metadata": { "order": 3 }
+      },
+      {
+        "id": "my-notifications",
+        "label": "Notifications",
+        "icon": "notifications-outline",
+        "route": "/my/notifications",
+        "metadata": { "order": 4 }
+      }
+    ]
+  },
+  {
+    "id": "account",
+    "label": "Account",
+    "icon": "log-in-outline",
+    "route": "/account",
+    "visibleWhen": "unauthenticated",
+    "metadata": {
+      "order": 4
+    },
+    "children": [
+      {
+        "id": "account-login",
+        "label": "Login",
+        "icon": "log-in-outline",
+        "route": "/account/login",
+        "metadata": { "order": 1 }
+      },
+      {
+        "id": "account-join",
+        "label": "Join",
+        "icon": "person-add-outline",
+        "route": "/account/join",
+        "metadata": { "order": 2 }
+      },
+      {
+        "id": "account-about",
+        "label": "About",
+        "icon": "information-circle-outline",
+        "route": "/account/about",
+        "metadata": { "order": 3 }
+      },
+      {
+        "id": "account-help",
+        "label": "Help",
+        "icon": "help-circle-outline",
+        "route": "/account/help",
+        "metadata": { "order": 4 }
+      }
+    ]
+  }
+]

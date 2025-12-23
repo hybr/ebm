@@ -1,0 +1,27 @@
+<ion-footer class="bottom-nav">
+  <ion-toolbar>
+    <div class="nav-container">
+      <!-- Back Button (conditionally shown) -->
+      <div *ngIf="showBackButton" class="nav-item back-button" (click)="onBackClick()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+        <span class="nav-label">Back</span>
+      </div>
+
+      <!-- Dynamic Navigation Items -->
+      <div
+        *ngFor="let item of navItems"
+        class="nav-item"
+        [class.active]="isActive(item)"
+        (click)="onNavItemClick(item)"
+      >
+        <ion-icon [name]="item.icon || 'ellipse-outline'"></ion-icon>
+        <span class="nav-label">{{ item.label }}</span>
+
+        <!-- Badge (e.g., notification count) -->
+        <ion-badge *ngIf="item.metadata?.badge" color="danger" class="nav-badge">
+          {{ item.metadata?.badge }}
+        </ion-badge>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-footer>

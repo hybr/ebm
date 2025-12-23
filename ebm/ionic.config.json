@@ -1,0 +1,7 @@
+{
+  "name": "ebm",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
