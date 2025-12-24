@@ -1,0 +1,32 @@
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item [routerLink]="['/market/goods']" detail>
+      <ion-icon name="cube-outline" slot="start"></ion-icon>
+      <ion-label>
+        <h2>Goods</h2>
+        <p>Physical products for sale</p>
+      </ion-label>
+    </ion-item>
+    <ion-item [routerLink]="['/market/services']" detail>
+      <ion-icon name="construct-outline" slot="start"></ion-icon>
+      <ion-label>
+        <h2>Services</h2>
+        <p>Professional services offered</p>
+      </ion-label>
+    </ion-item>
+    <ion-item [routerLink]="['/market/rentals']" detail>
+      <ion-icon name="key-outline" slot="start"></ion-icon>
+      <ion-label>
+        <h2>Rentals</h2>
+        <p>Items available for rent</p>
+      </ion-label>
+    </ion-item>
+    <ion-item [routerLink]="['/market/needs']" detail>
+      <ion-icon name="hand-left-outline" slot="start"></ion-icon>
+      <ion-label>
+        <h2>Needs</h2>
+        <p>Items or services wanted</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

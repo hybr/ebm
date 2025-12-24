@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 @Component({
-  selector: 'app-processes',
+  selector: 'app-my-processes',
   templateUrl: './processes.page.html',
   styleUrls: ['./processes.page.scss'],
   standalone: true,

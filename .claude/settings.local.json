@@ -8,7 +8,10 @@
       "Bash(npx @ionic/cli generate:*)",
       "Bash(npm run dev:*)",
       "Bash(ionic generate:*)",
-      "Bash(taskkill:*)"
+      "Bash(taskkill:*)",
+      "Bash(xargs:*)",
+      "Bash(dir:*)",
+      "Bash(npm run build:*)"
     ]
   }
 }

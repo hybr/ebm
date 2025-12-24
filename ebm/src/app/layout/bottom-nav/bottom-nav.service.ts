@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Location } from '@angular/common';
 import { BehaviorSubject } from 'rxjs';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
@@ -20,6 +21,7 @@ export class BottomNavService {
 
   constructor(
     private router: Router,
+    private location: Location,
     private navigationConfigService: NavigationConfigService,
     private featureFlagService: FeatureFlagService,
     private authService: AuthService,
@@ -72,7 +74,11 @@ export class BottomNavService {
       this.navigationStackSubject.next(stack);
 
       // Update visible nav items based on current depth
-      if (currentNode.children && currentNode.children.length > 0) {
+      // At root level (depth 1), always show the primary navigation tabs
+      if (breadcrumbs.length === 1) {
+        // Show root level (5 primary tabs: Home, Market, Activities, Work, My/Account)
+        this.updateVisibleNavItems();
+      } else if (currentNode.children && currentNode.children.length > 0) {
         // Show children of current node
         this.updateVisibleNavItems(currentNode.children);
       } else if (parentNode && parentNode.children) {
@@ -130,14 +136,8 @@ export class BottomNavService {
         return false;
       }
 
-      // Check auth requirements
-      if (node.requiresAuth && !isAuthenticated) {
-        return false;
-      }
-
-      if (node.requiresOrgAdmin && !isOrgAdmin) {
-        return false;
-      }
+      // Note: requiresAuth only controls route access (via AuthGuard), not nav visibility
+      // Note: requiresOrgAdmin only controls route access (via OrgAdminGuard), not nav visibility
 
       // Check visibility rules
       switch (node.visibleWhen) {
@@ -169,8 +169,17 @@ export class BottomNavService {
     const stack = this.navigationStackSubject.value;
     if (stack && stack.parentNode?.route) {
       this.router.navigate([stack.parentNode.route]);
+    } else if (stack && stack.breadcrumbs && stack.breadcrumbs.length > 1) {
+      // Navigate to the parent in breadcrumbs
+      const parent = stack.breadcrumbs[stack.breadcrumbs.length - 2];
+      if (parent?.route) {
+        this.router.navigate([parent.route]);
+      } else {
+        this.location.back();
+      }
     } else {
-      this.router.navigate(['/']);
+      // Use browser history as fallback
+      this.location.back();
     }
   }
 

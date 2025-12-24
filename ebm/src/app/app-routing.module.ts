@@ -12,6 +12,14 @@ const routes: Routes = [
     loadChildren: () => import('./features/home/home.module').then(m => m.HomeModule)
   },
   {
+    path: 'market',
+    loadChildren: () => import('./features/market/market.module').then(m => m.MarketModule)
+  },
+  {
+    path: 'activities',
+    loadChildren: () => import('./features/activities/activities.module').then(m => m.ActivitiesModule)
+  },
+  {
     path: 'work',
     loadChildren: () => import('./features/work/work.module').then(m => m.WorkModule)
   },
@@ -22,6 +30,22 @@ const routes: Routes = [
   {
     path: 'account',
     loadChildren: () => import('./features/account/account.module').then(m => m.AccountModule)
+  },
+  // Legacy redirects for backward compatibility
+  {
+    path: 'home/market',
+    redirectTo: 'market',
+    pathMatch: 'full'
+  },
+  {
+    path: 'home/job',
+    redirectTo: 'activities/vacancies',
+    pathMatch: 'prefix'
+  },
+  {
+    path: 'home/visit',
+    redirectTo: 'activities/appointments',
+    pathMatch: 'prefix'
   },
   {
     path: '**',
